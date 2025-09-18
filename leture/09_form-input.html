@@ -164,8 +164,6 @@
   </form>
 
 
-
-
   <!--
     * type="radio"
     1) 라디오버튼
@@ -182,15 +180,29 @@
 
   <form action="server/test.do">
     <fieldset>
-      <legend>라디오 버튼</legend>
-      성별 :
-      <input type="radio" id="genderM">
+      <legend>라디오버튼</legend>
+      성별 : 
+      <input type="radio" id="genderX" name="gender" value="X" checked>
+      <label for="genderX">선택안함</label>
+      <input type="radio" id="genderM" name="gender" value="M"> 
       <label for="genderM">남자</label>
-      <input type="radio" id="genderF">
+      <input type="radio" id="genderF" name="gender" value="F">
       <label for="genderF">여자</label>
     </fieldset>
+    <fieldset>
+      <legend>체크박스</legend>
+      취미 : 
+      <input type="checkbox" id="reading" name="hobby" value="reading">
+      <label for="reading">독서</label>
+      <input type="checkbox" id="sports" name="hobby" value="sports">
+      <label for="sports">운동</label>
+      <input type="checkbox" id="movie" name="hobby" value="movie">
+      <label for="movie">영화보기</label>
+    </fieldset>
     <input type="submit">
+    <input type="reset">
   </form>
+
 
   <!--
     * <select>, <option>
@@ -222,6 +234,53 @@
           <option></option>
         </datalist>
   -->
+
+  <form action="server/test.do">
+    <fieldset>
+      <legend>일반목록상자</legend>
+      국가번호 : 
+      <select name="countryNo">
+        <option value="01">가나 +01</option>
+        <option value="02">가봉 +02</option>
+        <option value="82" selected>한국 +82</option>
+        <option value="99">일본 +99</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>콤보상자</legend>
+      이메일 : 
+      <input type="text" size="10"> @
+      <input type="text" list="domainList">
+      <datalist id="domainList">
+        <option>naver.com</option>
+        <option>kakao.com</option>
+        <option>gmail.com</option>
+      </datalist>
+    </fieldset>
+    <input type="submit">
+  </form>
+
+  <h2>기타 input</h2>
+  <form action="server/test.do">
+    색상 : <input type="color" name="color"> <br>
+    첨부파일 : <input type="file" name="file"> <br>
+    숨김정보 : <input type="hidden" name="hidden" value="ㅋㅋㅋ"> <br>
+
+    <input type="submit" >
+    <input type="reset" >
+    <input type="button" value="일반버튼">
+    <br>
+
+    <button type="submit">제출</button>
+    <button type="reset">초기화</button>
+    <button type="button">일반버튼</button>
+
+  </form>
+
+
+
+
+
 
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
